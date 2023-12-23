@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>BMI</title>
+        <style>
+              body  {
+    background-image: url("static/bg.jpg");
+    background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=number], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background: rgba(192, 185, 185, 0.5);
+  padding: 50px 50px;
+  height: 400px;
+  width: 20%;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left:36%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+
+}
+button {
+  background-color: rgb(47, 167, 167);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 300px;
+}
+      </style>
+    </head>
+<body>
+    <div>
+        <h1><b>Know Your Fitness</b></h1>
+        <label>Gender :</label>
+    <form name="passdata" action="." method="post">
+        <input type="radio" id="male" name="Gender" value="Male">
+     <label for="male">Male</label>
+     <input type="radio" id="female" name="Gender" value="Female">
+      <label for="female">Female</label><br>
+        <br>
+        <label>Height (in cm):</label>
+        <input type="number" name="Height">
+        <label>Weight:</label>
+        <input type="number" name="Weight">
+        <button type="submit" onclick="myfunction()">Submit</button>
+        <span id="wait"></span>
+    </form>
+</div>
+</body>
+<script>
+  function myfunction() {
+  document.getElementById("wait").innerHTML = "Please wait while data is being processed.....";
+}
+</script>
+</html>
